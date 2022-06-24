@@ -1,4 +1,9 @@
-# vue-ghost
+# Spectral Vision
+---
+**Nuxt.js** front end rendering content from **Ghost CMS**.
+This is part of my chaotic and exciting foray into the magical forest of the JAMstack. To learn the ins-and-outs of using headless CMS, I'll be using basic starter kits
+and boilerplate scripts to render a few choice CMS applications (WordPress, Sanity.io, Ghost CMS, etc.) with Javascript frameworks such Vue and React. For this project,
+I've selected Nuxt to pull content from Ghost.
 
 ## Build Setup
 
