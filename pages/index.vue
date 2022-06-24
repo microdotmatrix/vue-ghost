@@ -4,10 +4,12 @@
       <nuxt-link :to="{ path: post.slug }">{{ post.title }}</nuxt-link>
     </li>
   </ul>
+
 </template>
 
 <script>
-  import { getPosts } from '../api/posts';
+import { getPosts } from '../api/posts';
+
 
 
   export default {
