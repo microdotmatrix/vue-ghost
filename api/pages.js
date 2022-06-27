@@ -7,21 +7,10 @@ const api = new GhostContentAPI({
   version: process.env.GHOST_VER
 })
 
-export async function getPosts() {
-  return await api.posts
+export async function getPages() {
+  return await api.pages
     .browse({
-      include: "tags,authors",
       limit: "all"
-    })
-    .catch(err => {
-      console.error(err);
-    });
-}
-
-export async function getSinglePost(postSlug) {
-  return await api.posts
-    .read({
-      slug: postSlug
     })
     .catch(err => {
       console.error(err);

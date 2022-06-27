@@ -1,4 +1,5 @@
 export default {
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'vue-ghost',
@@ -12,7 +13,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['element-ui/lib/theme-chalk/index.css'],
+  css: ['./assets/css/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['@/plugins/element-ui'],
@@ -21,7 +22,13 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: [
+    '@nuxtjs/dotenv'
+  ],
+  dotenv: {
+    /* module options */
+    filename: '.env.local'
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -44,6 +51,14 @@ export default {
     manifest: {
       lang: 'en',
     },
+  },
+
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in',
+    beforeEnter (el) {
+      console.log('Before enter...');
+    }
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
